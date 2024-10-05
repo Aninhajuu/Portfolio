@@ -7,19 +7,51 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/javascript/tailwind.config.js"></script>
 </head>
-<body>
-    <nav class="w-full fixed px-5 lg:px-8 lg:px[8%] py-4 flex items-center justify-between z-50">
+<body class="overflow-x-auto">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+        <img src="./assets/images/header-bg-color.png" alt="" class="w-full">
+    </div>
+    <!-- aqui vc tem o header (o cabeçalho) aqui vc pode mudar os "menu" do seu site -->
+    <nav class="w-full fixed px-5 lg:px-8 xl:px[8%] py-4 flex items-center justify-between z-50">
         <img src="./assets/images/logo_ana_ju.png" alt="logo" class="w-28 cursor-pointer mr-14">
         <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bgopacuty-50">
+            <!-- Aqui tem a lista dos itens do header caso vc queira mudar o nome mude o q esta entre os (>o que esta aqui<) -->
             <li><a href="#top">Home</a></li>
             <li><a href="#about">About me</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#work">My Work</a></li>
             <li><a href="#contact">Contact me</a></li>
         </ul>
-        <a href="#contact" 
-        class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4">contact <img src="./assets/images/arrow-icon.png" alt="" class="w-3"></a>
+
+        <!-- Aqui tem o icon que troca pro modo claro e noturno e o botão de contato, se quiser colocar o link do botão para o seu zap, mude ali no href"isso aqui" e coloque tel:+seu numero -->
+        <div class="flex items-center gap-4">
+
+            <button><img src="./assets/images/moon_icon.png" alt="" class="w-6"></button>
+
+            <a href="#contact" class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4">contact <img src="./assets/images/arrow-icon.png" alt="" class="w-3"></a>
+
+            <button class="block md:hidden ml-3" onclick="openMenu()"> 
+                <img src="./assets/images/menu-black.png" alt="" class="w-6">
+            </button>
+        </div>
+
+        <!-- Mobile menu -->
+         <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500">
+            
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./assets/images/close-black.png" alt="" class="w-5 cursor-pointer">
+            </div>
+            
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#contact">Contact me</a></li>
+        </ul>
+
     </nav>
     
+<script src="./assets/javascript/app.js"></script>
 </body>
 </html>
