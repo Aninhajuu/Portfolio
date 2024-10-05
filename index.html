@@ -12,7 +12,7 @@
     <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
         <img src="./assets/images/header-bg-color.png" alt="" class="w-full">
     </div>
-    <!-- aqui vc tem o header (o cabeçalho) aqui vc pode mudar os "menu" do seu site -->
+    <!-- aqui vc tem o "cabeçalho" aqui vc pode mudar os "menu" do seu site -->
     <nav class="w-full fixed px-5 lg:px-8 xl:px[8%] py-4 flex items-center justify-between z-50">
         <img src="./assets/images/logo_ana_ju.png" alt="logo" class="w-28 cursor-pointer mr-14">
         <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bgopacuty-50">
@@ -43,15 +43,34 @@
                 <img src="./assets/images/close-black.png" alt="" class="w-5 cursor-pointer">
             </div>
             
-            <li><a href="#top">Home</a></li>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#work">My Work</a></li>
-            <li><a href="#contact">Contact me</a></li>
+            <li><a href="#top" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about"onclick="closeMenu()">About me</a></li>
+            <li><a href="#services" onclick="closeMenu()">Services</a></li>
+            <li><a href="#work" onclick="closeMenu()">My Work</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
         </ul>
 
     </nav>
-    
+    <!-- Header -->
+    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+        <img src="./assets/images/profile_aninha.jpeg" alt="" class="rounded-full w-32">
+        <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3">hi! I'am Ana Julia Ribeiro<img src="./assets/images/hand-icon.png" alt="" class="w-6"></h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px]">Desegner based in São Paulo SP</h1>
+        <p class="max-w-2xl mx-auto">I am a web designer and artist from São Paulo, Brazil with 6 years of experience with numerous works done so far.
+        I also have a degree in Business Administration and a Biomedicine student</p>
+
+        <!-- Botôes -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+
+            <!-- Botão de contato -->
+            <a href="#contact" class="px-10 py-3 border rounded-full bg-gradient-to-t from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2">contact me <img src="./assets/images/right-arrow-white.png" alt="" class="w-4"></a>
+            
+            <!-- Botão do curriculo: coloca o Link do seu curriculo no href="./assets/images/logo_ana_ju.png" -->
+            <a href="./assets/images/logo_ana_ju.png" download 
+            class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white">my resume <img src="./assets/images/download-icon.png" alt="" class="w-4"></a>
+        </div>
+    </div>
+
 <script src="./assets/javascript/app.js"></script>
 </body>
 </html>
